@@ -1,12 +1,18 @@
+# delpoyed with heroku
+https://tdd-presentation.herokuapp.com/ | https://git.heroku.com/tdd-presentation.git
+
 Spectacle Boilerplate
 =====================
 
 ## Contents
 
-- [Reference](#reference)
-- [Getting Started](#getting-started)
-- [Tutorial](#tutorial)
-- [Build & Deployment](#build-deployment)
+- [delpoyed with heroku](#delpoyed-with-heroku)
+- [Spectacle Boilerplate](#spectacle-boilerplate)
+  - [Contents](#contents)
+  - [Reference](#reference)
+  - [Getting Started](#getting-started)
+  - [Tutorial](#tutorial)
+  - [Build & Deployment](#build--deployment)
 
 ## Reference
 

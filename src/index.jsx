@@ -6,7 +6,6 @@ import {
   Slide,
   Heading,
   ListItem as LI,
-  Text,
   List,
   CodePane,
   Table,
@@ -15,7 +14,10 @@ import {
   TableItem as TI,
   TableRow as TR,
   Image,
-  Quote
+  BlockQuote,
+  Quote,
+  Cite,
+  Link
 } from 'spectacle';
 
 import mergeTheme from 'spectacle/lib/themes/default';
@@ -55,14 +57,25 @@ const style = {
 const Presentation = () => (
   <Deck theme={myTheme}>
     <Slide>
-      <Heading size={4}>Making Local API Harder to Misuse</Heading>
-        <List>
-          <LI>APIs should be easy to use and "hard to misuse"</LI>
-          <LI>It should be easy to do simple things</LI>
-          <LI>possible to do complex things</LI>
-          <LI>"impossible, or at least difficult, to do wrong things"</LI>
-        </List>
-        <Text>Joshua Bloch</Text>
+      <Heading size={4}>Follow Along</Heading>
+      <List>
+        <LI>Code on slides is Tough</LI>
+        <LI><Link href={"https://github.com/tjtaill/tdd-presentation"}>https://github.com/tjtaill/tdd-presentatio</Link></LI>
+        <LI><Link href={"https://tdd-presentation.herokuapp.com/"}>https://tdd-presentation.herokuapp.com/</Link></LI>
+        <LI>The presentation is a spectacle js React with CD to Heroku</LI>
+      </List>
+    </Slide>
+    <Slide>
+      <Heading size={6}>Making Local API Harder to Misuse</Heading>
+        <BlockQuote>
+          <Quote textSize={36} bgColor="primary" textColor="secondary">{`
+              APIs should be easy to use and "hard to misuse".
+              It should be easy to do simple things.
+              possible to do complex things.
+              "impossible, or at least difficult, to do wrong things"
+          `}</Quote>
+          <Cite>Joshua Bloch</Cite>
+        </BlockQuote>
     </Slide>
     <Slide>
       <Heading size={4}>Type Systems</Heading>
@@ -106,8 +119,8 @@ const Presentation = () => (
       </Context>
     </Slide>
     <Slide>
-      <Heading size={4}>Java Phantom Typing Money</Heading>
-      <CodePane textSize={18} lang="java" source={javaMoney}/>
+      <Heading size={6}>Java Phantom Typing Money</Heading>
+      <CodePane textSize={16} lang="java" source={javaMoney}/>
     </Slide>
     <Slide>
       <Heading size={4}>Showing Relevance</Heading>
@@ -138,16 +151,16 @@ const Presentation = () => (
       </Table>
     </Slide>
     <Slide>
-      <Heading size={6}>Typescript Phantom Typing using Class Branding</Heading>
+      <Heading size={6}>Typescript Phantom Typing Class Branding</Heading>
       <CodePane textSize={16} lang="ts" source={tsPhantomClass}/>
-    </Slide>
-    <Slide>
-      <Heading size={6}>Typescript Phantom Typing using Intersection Types Branding</Heading>
-      <CodePane textSize={16} lang="ts" source={tsPhantomIntersection}/>
     </Slide>
     <Slide>
       <Heading size={4}>More Motivation</Heading>
       <Image src={marsOrbiter}/>
+    </Slide>
+    <Slide>
+      <Heading size={6}>Typescript Phantom Typing Intersection Branding</Heading>
+      <CodePane textSize={14} lang="ts" source={tsPhantomIntersection}/>
     </Slide>
     <Slide>
       <Heading size={4}>Unit Libraries</Heading>
@@ -167,8 +180,8 @@ const Presentation = () => (
       </Table>
     </Slide>
     <Slide>
-      <Heading size={4}>Java Phantom Callbacks</Heading>
-      <CodePane textSize={16} lang="java" source={javaPhantomCallbacks}/>
+      <Heading size={6}>Java Phantom Callbacks</Heading>
+      <CodePane textSize={14} lang="java" source={javaPhantomCallbacks}/>
     </Slide>
     <Slide>
       <Heading size={4}>Typescript Phantom Callbacks</Heading>
@@ -180,7 +193,7 @@ const Presentation = () => (
     </Slide>
     <Slide>
       <Heading size={6}>Java Phantom State</Heading>
-      <CodePane textSize={14} lang="java" source={javaPhantomState}/>
+      <CodePane textSize={12} lang="java" source={javaPhantomState}/>
     </Slide>
     <Slide>
       <Heading size={6}>Composition Types Sum vs Product</Heading>
@@ -189,34 +202,36 @@ const Presentation = () => (
           <THI style={style}>Type</THI><THI style={style}>Description</THI><THI style={style}>Examples</THI>
         </TH>
         <TR style={style}>
-          <TI style={style}>Product</TI><TI style={style} textSize={12}>Composition types whose enumerated possible values are the cartesian product of all composed members</TI>
+          <TI style={style}>Product</TI><TI style={style} textSize={24}>Composition types whose enumerated possible values are the cartesian product of all composed members</TI>
           <TI style={style}>
             <List>
-              <LI textSize={12}>Typescript : Object, Tuple, Intersections, Interface, Class</LI>
-              <LI etxtSize={12}>Java: Class, Map</LI>
+              <LI textSize={24}>Typescript : Object, Tuple, Intersections, Interface, Class</LI>
+              <LI textSize={24}>Java: Class, Map</LI>
             </List>
           </TI>
         </TR>
         <TR style={style}>
-          <TI style={style}>Sum</TI><TI style={style} textSize={12}>Composition type whose enumerated possible values is the sume of all composed members</TI>
+          <TI style={style}>Sum</TI><TI style={style} textSize={24}>Composition type whose enumerated possible values is the sume of all composed members</TI>
           <TI style={style}>
-              <LI textSize={12}>Typescript : Unions, enum</LI>
-              <LI textSize={12}>Java: Optional, Enum, Try(vavr)</LI>
+              <List>
+                <LI textSize={24}>Typescript : Unions, enum</LI>
+                <LI textSize={24}>Java: Optional, Enum, Try(vavr)</LI>
+              </List>
           </TI>
         </TR>
       </Table>
     </Slide>
     <Slide>
       <Heading size={6}>Typescript Sum Type Option</Heading>
-      <CodePane textSize={16} lang="ts" source={tsOption}/>
+      <CodePane textSize={14} lang="ts" source={tsOption}/>
     </Slide>
     <Slide>
       <Heading size={4}>Java Optional Sum Type</Heading>
       <CodePane textSize={18} lang="java" source={javaOptional}/>
     </Slide>
     <Slide>
-      <Heading size={4}>Typescript Sum Type Result</Heading>
-      <CodePane textSize={16} lang="ts" source={tsResult}/>
+      <Heading size={6}>Typescript Sum Type Result</Heading>
+      <CodePane textSize={14} lang="ts" source={tsResult}/>
     </Slide>
     <Slide>
       <Heading size={4}>Java Vavr Try Sum Type</Heading>
@@ -224,7 +239,7 @@ const Presentation = () => (
     </Slide>
     <Slide>
       <Heading size={6}>Java 14 Switch Expressions</Heading>
-      <CodePane textSize={12} lang="java" source={javaSwitchExpression}/>
+      <CodePane textSize={10} lang="java" source={javaSwitchExpression}/>
     </Slide>
     <Slide>
       <Heading size={4}>Value Objects</Heading>
@@ -238,11 +253,11 @@ const Presentation = () => (
       </List>
     </Slide>
     <Slide>
-      <Heading size={4}>Typescript Value Objects</Heading>
-      <CodePane textSize={18} lang="ts" source={tsValueObjects}/>
+      <Heading size={6}>Typescript Value Objects</Heading>
+      <CodePane textSize={16} lang="ts" source={tsValueObjects}/>
     </Slide>
     <Slide>
-      <Heading size={4}>Java Value Objects</Heading>
+      <Heading size={6}>Java Value Objects</Heading>
       <CodePane textSize={18} lang="java" source={javaValueObjects}/>
     </Slide>
     <Slide>
@@ -260,13 +275,15 @@ const Presentation = () => (
       </table>
     </Slide>
     <Slide>
-      <Text>{`
-      Making illegal states unrepresentable is all about statically proving that all runtime values (without exception)
-      correspond to valid objects in the business domain. The effect of this technique on eliminating meaningless runtime states
-      is astounding and cannot be overstated.
-
-        -— John A De Goes (@jdegoes) January 28, 2019
-      `}</Text>
+    <BlockQuote>
+          <Quote textSize={36} bgColor="primary" textColor="secondary">{`
+              Making illegal states unrepresentable is all about statically proving that all
+              runtime values (without exception) correspond to valid objects in the business domain.
+              The effect of this technique on eliminating meaningless runtime states
+              is astounding and cannot be overstated.
+          `}</Quote>
+          <Cite>John A De Goes (@jdegoes) January 28, 2019</Cite>
+        </BlockQuote>
     </Slide>
     <Slide>
       <Heading size={4}>The End</Heading>
