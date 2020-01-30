@@ -62,7 +62,7 @@ const Presentation = () => (
         <LI>Code on slides is Tough</LI>
         <LI><Link href={"https://github.com/tjtaill/tdd-presentation"}>https://github.com/tjtaill/tdd-presentatio</Link></LI>
         <LI><Link href={"https://tdd-presentation.herokuapp.com/"}>https://tdd-presentation.herokuapp.com/</Link></LI>
-        <LI>The presentation is a spectacle js React with CD to Heroku</LI>
+        <LI>The presentation is a spectacle js React App with CD to Heroku</LI>
       </List>
     </Slide>
     <Slide>
