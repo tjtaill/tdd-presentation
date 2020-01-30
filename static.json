@@ -1,0 +1,6 @@
+{
+    "root": "dist/",
+    "roots": {
+        "/**": "index.html"
+    }
+}
