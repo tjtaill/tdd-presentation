@@ -1,4 +1,4 @@
-# delpoyed with heroku
+# deployed with heroku
 https://tdd-presentation.herokuapp.com/ | https://git.heroku.com/tdd-presentation.git
 
 Spectacle Boilerplate
