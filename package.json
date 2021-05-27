@@ -1,6 +1,6 @@
 {
   "name": "tdd-development",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Spectacle presentation",
   "scripts": {
     "clean": "rimraf dist",
